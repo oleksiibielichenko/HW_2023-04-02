@@ -23,3 +23,5 @@
 # class Cart: sum_products = [] => getFullPrice(*args, **kwargs)
 #
 # class Bag: bag = []
+
+print("We glad to see you in our Store!!!")
