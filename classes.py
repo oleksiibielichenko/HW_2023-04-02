@@ -3,11 +3,11 @@ class Store:
         self.name = name
         self.product = product
 
-    def getName(self):
-        print(self.name)
+    # def getName(self):
+    #     print(self.name)
 
-    def getProducts(self):
-        print(self.product)
+    # def getProducts(self):
+    #     print(self.product)
 
 
 class User:

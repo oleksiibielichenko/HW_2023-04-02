@@ -23,20 +23,56 @@
 #
 # class Bag: bag = []
 
-# from Classes.admin import Admin
-from Classes.bag import Bag
-from Classes.cart import Cart
-from Classes.product import Product
-from Classes.store import Store
-from Classes.user import User
+from classes import Admin
+from classes import Bag
+from classes import Cart
+from classes import Product
+from classes import Store
+from classes import User
 
 
 store_name = Store("BOV")
-# print(f"We glad to see you in our store {store_name.getName()}!")
-# print(store_name.getProducts())
+print(f"We glad to see you in our store {store_name.name}!")
+print(f'''There are our products:
+{store_name.product}''')
 
-print(store_name.name)
+# print(store_name.name)
 
-# new_user = User('Kir', '232323', 24, 10_000, ())
+new_user = User('Kir', '232323', 24, 10_000, ())
+admin = Admin('Alex', '585858', 40, 8_000, (), True)
 
-# admin = Admin('Alex', '585858', 40, 8_000, (), True)
+
+store = {
+    'kit-kat': 20,
+    'nuts': 15,
+    'snickers': 25,
+    'orbit': 10,
+    'dirol': 11,
+    'coca-cola': 40,
+    'fanta': 41,
+    'sprite': 42,
+}
+
+
+cash = int(
+    input(f"Hello, {user_name.capitalize()}!"
+          f"\nHow much money do you have? "))
+
+
+if not cash:
+    print(f"Good bye, {user_name.capitalize()}!"
+          f"Come in with money next time!")
+else:
+    print("Our goods: ", store)
+    print(f"What do you want to buy, {user_name.capitalize()}? ")
+
+while cash > 0:
+    order = input("Enter product name: ")
+
+    if order in store:
+        cash = cash - store[order]
+        print(f"You have {cash} left")
+    else:
+        print(f"Sorry, {user_name.capitalize()}, "
+              f"but we don't have the {order}")
+print(f"Good bye, {user_name.capitalize()}!")
