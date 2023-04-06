@@ -37,7 +37,12 @@ class Cart:
 
 class Product:
 
-    def __init__(self, name, description, price):
-        self._name = name
-        self._desc = description
-        self._price = price
+    def __init__(self, label, price):
+        self.label = label
+        self.price = price
+
+    def newProduct(self):
+        self.new = {
+            'label': self.label,
+            'price': self.price
+        }

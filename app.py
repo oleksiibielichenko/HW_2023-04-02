@@ -36,22 +36,9 @@ print(f"We glad to see you in our store {store_name.name}!")
 print(f'''There are our products:
 {store_name.product}''')
 
-# print(store_name.name)
 
 new_user = User('Kir', '232323', 24, 10_000, ())
 admin = Admin('Alex', '585858', 40, 8_000, (), True)
-
-
-store = {
-    'kit-kat': 20,
-    'nuts': 15,
-    'snickers': 25,
-    'orbit': 10,
-    'dirol': 11,
-    'coca-cola': 40,
-    'fanta': 41,
-    'sprite': 42,
-}
 
 
 cash = int(
