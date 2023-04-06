@@ -26,3 +26,7 @@
 
 
 print("We glad to see you in our Store!!!")
+
+
+ATB = Store("ATB")
+print(ATB.getName())
