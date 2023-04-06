@@ -1,6 +1,7 @@
 class User:
-    def __init__(self, name, password, age, card):
+    def __init__(self, name, password, age, money, bag):
         self._name = name
         self._password = password
         self._age = age
-        self._card = card
+        self._money = money
+        self._bag = bag
