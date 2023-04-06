@@ -1,4 +1,3 @@
-
 # 1) Greeting
 # 2) Context-menu
 #   a) Register new user
@@ -24,9 +23,20 @@
 #
 # class Bag: bag = []
 
+# from Classes.admin import Admin
+from Classes.bag import Bag
+from Classes.cart import Cart
+from Classes.product import Product
+from Classes.store import Store
+from Classes.user import User
 
-print("We glad to see you in our Store!!!")
 
+store_name = Store("BOV")
+# print(f"We glad to see you in our store {store_name.getName()}!")
+# print(store_name.getProducts())
 
-ATB = Store("ATB")
-print(ATB.getName())
+print(store_name.name)
+
+# new_user = User('Kir', '232323', 24, 10_000, ())
+
+# admin = Admin('Alex', '585858', 40, 8_000, (), True)
