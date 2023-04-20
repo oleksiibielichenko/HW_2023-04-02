@@ -1,7 +1,6 @@
 
-symbols = ('@', '.', '!', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9')
-
-# 'greeting': lambda email: print(f"Hello from {email}")
+from check_email import check_email
+from check_password import check_password
 
 
 def user(email, password):
@@ -17,26 +16,11 @@ def registration():
 
 def validation(user, list):
     email, password, *args = user.values()
-    global symbols
-    for i in symbols[0:2]:
-        if i not in email:
-            rules_email = True
-            break
-        else:
-            rules_email = False
-    for j in symbols:
-        if len(password) < 6:
-            rules_password = True
-            break
-        elif j in password:
-            rules_password = False
-            break
-        else:
-            rules_password = True
-    if rules_email or rules_password:
-        raise TypeError("Invalid data")
-    list.append(user)
-    return True
+    if check_email(email) or check_password(password):
+        list.append(user)
+        return True
+    else:
+        return False
 
 
 registred = registration()
